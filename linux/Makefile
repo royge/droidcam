@@ -7,8 +7,8 @@
 # Use at your own risk. See README file for more details.
 
 CC    = -no-pie
-GTK   = `pkg-config --libs --cflags gtk+-2.0`
-LIBS  = `pkg-config --libs libswscale libavutil`
+GTK   = `pkg-config --libs --cflags gtk+-2.0` `pkg-config --libs x11`
+LIBS  = `pkg-config --libs --cflags libswscale libavutil`
 JPEG  = -I/opt/libjpeg-turbo/include /opt/libjpeg-turbo/lib`getconf LONG_BIT`/libturbojpeg.a
 SRC      = src/connection.c src/decoder.c
 NO_WARN  = -Wno-pointer-to-int-cast -Wno-int-to-pointer-cast
